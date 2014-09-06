@@ -1,0 +1,1 @@
+web: newrelic-admin run-program gunicorn -t 90 app:app
