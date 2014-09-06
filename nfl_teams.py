@@ -1,4 +1,4 @@
-teams = {
+nfl_teams = {
     'SEA': 'Seattle Seahawks',
     'DEN': 'Denver Broncos',
     'NE': 'New England Patriots',

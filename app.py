@@ -1,5 +1,5 @@
 import os
-from flask import Flask, jsonify
+from flask import Flask
 from flask.ext import restful
 import nfl_teams
 
@@ -11,13 +11,13 @@ class HelloWorld(restful.Resource):
     def get(self):
         return {'hello': 'world'}
 
-class nfl_teams(restful.Resource):
+class nfl(restful.Resource):
     def get(self):
-        return jsonify(nfl_teams)
+        return nfl_teams
 
 #endpoints
 api.add_resource(HelloWorld, '/')
-api.add_resource(nfl_teams, '/nfl')
+api.add_resource(nfl, '/nfl')
 
 if __name__ == "__main__":
     port = int(os.environ.get('PORT', 5000))
