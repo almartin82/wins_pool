@@ -1,5 +1,5 @@
 import os
-from flask import Flask
+from flask import Flask, jsonify
 from flask.ext import restful
 import nfl_teams
 
@@ -9,11 +9,11 @@ api = restful.Api(app)
 #objects
 class HelloWorld(restful.Resource):
     def get(self):
-        return nfl_teams
+        return {'hello': 'world'}
 
 class nfl(restful.Resource):
     def get(self):
-        return nfl_teams
+        return jsonify(nfl_teams)
 
 #endpoints
 api.add_resource(HelloWorld, '/')
