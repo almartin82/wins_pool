@@ -1,5 +1,5 @@
 from flask.ext import restful
-from data import nfl_teams
+from api.data import nfl_teams
 
 class HelloWorld(restful.Resource):
     def get(self):
