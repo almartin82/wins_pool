@@ -9,7 +9,7 @@ api = restful.Api(app)
 #objects
 class HelloWorld(restful.Resource):
     def get(self):
-        return {'hello': 'world'}
+        return nfl_teams
 
 class nfl(restful.Resource):
     def get(self):
