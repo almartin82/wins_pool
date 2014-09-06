@@ -1,2 +1,4 @@
 Flask==0.8
 Flask-RESTful==0.2.6
+Jinja2==2.6
+Werkzeug==0.8.3
