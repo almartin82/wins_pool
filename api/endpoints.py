@@ -1,4 +1,4 @@
-from . import app, api
+from .import api
 from models import *
 
 api.add_resource(HelloWorld, '/')
