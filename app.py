@@ -1,5 +1,5 @@
 import os
-from flask import Flask, jsonify
+from flask import Flask
 from flask.ext import restful
 import nfl_teams
 
@@ -15,42 +15,7 @@ class HelloWorld(restful.Resource):
 
 class nfl(restful.Resource):
     def get(self):
-
-        foo = {
-            'SEA': 'Seattle Seahawks',
-            'DEN': 'Denver Broncos',
-            'NE': 'New England Patriots',
-            'GB': 'Green Bay Packers',
-            'PHI': 'Philadelphia Eagles',
-            'NO': 'New Orleans Saints',
-            'SF': 'San Francisco 49ers',
-            'SD': 'San Diego Chargers',
-            'CIN': 'Cincinnati Bengals',
-            'IND': 'Indianapolis Colts',
-            'ATL': 'Atlanta Falcons',
-            'BAL': 'Baltimore Ravens',
-            'CHI': 'Chicago Bears',
-            'MIA': 'Miami Dolphins',
-            'PIT': 'Pittsburgh Steelers',
-            'TB': 'Tampa Bay Buccaneers',
-            'CAR': 'Carolina Panthers',
-            'TEN': 'Tennessee Titans',
-            'MIN': 'Minnesota Vikings',
-            'KC': 'Kansas City Chiefs',
-            'DET': 'Detroit Lions',
-            'HOU': 'Houston Texans',
-            'NYG': 'New York Giants',
-            'DAL': 'Dallas Cowboys',
-            'ARI': 'Arizona Cardinals',
-            'CLE': 'Cleveland Browns',
-            'BUF': 'Buffalo Bills',
-            'WAS': 'Washington Redskins',
-            'STL': 'St. Louis Rams',
-            'OAK': 'Oakland Raiders',
-            'NYJ': 'New York Jets',
-            'JAX': 'Jacksonville Jaguars'
-        }
-        return foo
+        return nfl_teams.nfl_teams
 
 #endpoints
 api.add_resource(HelloWorld, '/')
