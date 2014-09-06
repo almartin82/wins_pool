@@ -6,14 +6,17 @@ import nfl_teams
 app = Flask(__name__)
 api = restful.Api(app)
 
+
 #objects
 class HelloWorld(restful.Resource):
     def get(self):
         return {'hello': 'world'}
 
+
 class nfl(restful.Resource):
     def get(self):
-        return jsonify(nfl_teams)
+        foo = {'Hola': 'Hello', 'Hoi': "Hello", 'noun': "hello"}
+        return foo
 
 #endpoints
 api.add_resource(HelloWorld, '/')
