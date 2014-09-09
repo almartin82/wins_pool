@@ -6,6 +6,12 @@ class HelloWorld(restful.Resource):
         return {'hello': 'world'}
 
 
+class MyFavoriteRobots(restful.Resource):
+    def get(self):
+        return {'R2-D2': 'R-Too Dee-Too',
+                'Johny 5': 'Is alive!'}
+
+
 class nfl_teams(restful.Resource):
     def get(self):
         teams = {
